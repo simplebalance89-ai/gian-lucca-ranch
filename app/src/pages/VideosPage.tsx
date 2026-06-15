@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Film, ArrowLeft, Play, Clock, Star, Sparkles, X, Volume2, VolumeX } from 'lucide-react';
 import { Link } from 'react-router';
@@ -125,15 +125,6 @@ function VideoModal({
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(false);
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.play().catch(() => {
-        // Autoplay may be blocked or interrupted; ignore the error.
-      });
-    }
-  }, []);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -165,6 +156,7 @@ function VideoModal({
             src={story.videoSrc}
             poster={story.image}
             controls
+            autoPlay
             playsInline
             muted={isMuted}
             className="w-full h-full"
