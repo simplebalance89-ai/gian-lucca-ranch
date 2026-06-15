@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 30 15% 20%;
+    --card: 40 33% 97%;
+    --card-foreground: 30 15% 20%;
+    --popover: 40 33% 97%;
+    --popover-foreground: 30 15% 20%;
+    --primary: 35 50% 45%;
+    --primary-foreground: 40 33% 97%;
+    --secondary: 80 20% 55%;
+    --secondary-foreground: 40 33% 97%;
+    --muted: 35 20% 90%;
+    --muted-foreground: 30 10% 45%;
+    --accent: 25 70% 55%;
+    --accent-foreground: 40 33% 97%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 35 50% 45%;
+    --radius: 1rem;
+    --sidebar-background: 40 30% 95%;
+    --sidebar-foreground: 30 15% 20%;
+    --sidebar-primary: 35 50% 45%;
+    --sidebar-primary-foreground: 40 33% 97%;
+    --sidebar-accent: 35 20% 90%;
+    --sidebar-accent-foreground: 30 15% 20%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-ring: 35 50% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-shadow-warm {
+    text-shadow: 2px 2px 4px rgba(139, 90, 43, 0.2);
+  }
+  .card-shadow {
+    box-shadow: 0 8px 32px rgba(139, 90, 43, 0.12), 0 2px 8px rgba(139, 90, 43, 0.08);
+  }
+  .card-shadow-hover {
+    box-shadow: 0 16px 48px rgba(139, 90, 43, 0.18), 0 4px 16px rgba(139, 90, 43, 0.12);
+  }
+  .story-card-shadow {
+    box-shadow: 0 12px 40px rgba(180, 120, 60, 0.2), 0 4px 12px rgba(180, 120, 60, 0.1);
+  }
+  .gradient-warm {
+    background: linear-gradient(135deg, #faf6f0 0%, #f5ede0 50%, #faf6f0 100%);
+  }
+  .gradient-green {
+    background: linear-gradient(135deg, #8b9a6d 0%, #a3b18a 50%, #8b9a6d 100%);
+  }
+  .waveform-bar {
+    animation: waveform 1s ease-in-out infinite alternate;
+  }
+  @keyframes waveform {
+    0% { height: 20%; }
+    100% { height: 100%; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(3deg); }
+  }
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    33% { transform: translateY(-8px) translateX(5px); }
+    66% { transform: translateY(-4px) translateX(-3px); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(210, 150, 80, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(210, 150, 80, 0.6); }
+  }
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @keyframes music-note {
+    0% { transform: translateY(0) translateX(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100px) translateX(30px) scale(0.5); opacity: 0; }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  .animate-float-slow {
+    animation: floatSlow 4s ease-in-out infinite;
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  .animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
