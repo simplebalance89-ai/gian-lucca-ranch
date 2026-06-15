@@ -1,3 +1,5 @@
+import { assetUrl } from '../lib/supabaseAssets';
+
 export interface VideoStory {
   id: string;
   title: string;
@@ -16,7 +18,7 @@ export const videoStories: VideoStory[] = [
     id: 'sleepy-bear',
     title: 'The Sleepy Little Bear',
     description: "A heartwarming bedtime story about a little bear who can't fall asleep.",
-    image: '/sleepy-bear-story.png',
+    image: assetUrl('sleepy-bear-story.png'),
     videoSrc: '/videos/sleepy-bear.mp4?v=2',
     duration: '2:23',
     status: 'available',
@@ -28,7 +30,7 @@ export const videoStories: VideoStory[] = [
     id: 'benny-adventure',
     title: "Benny Bear's Adventure",
     description: 'Join Benny Bear on an exciting journey through the ranch!',
-    image: '/bear-friend.png',
+    image: assetUrl('bear-friend.png'),
     videoSrc: '/videos/benny-adventure.mp4?v=2',
     duration: '2:05',
     status: 'available',
@@ -40,7 +42,7 @@ export const videoStories: VideoStory[] = [
     id: 'chicken-dance',
     title: 'Chicken Dance Party',
     description: 'Get ready to dance with the chickens in this fun-filled video!',
-    image: '/chickens-friends.png',
+    image: assetUrl('chickens-friends.png'),
     videoSrc: '/videos/chicken-dance.mp4?v=2',
     duration: '2:11',
     status: 'available',
@@ -52,7 +54,7 @@ export const videoStories: VideoStory[] = [
     id: 'tommy-turkey',
     title: "Tommy Turkey's Day",
     description: 'Spend a day with Tommy Turkey and learn about gratitude.',
-    image: '/turkey-friends.png',
+    image: assetUrl('turkey-friends.png'),
     videoSrc: '/videos/tommy-turkey.mp4?v=2',
     duration: '2:08',
     status: 'available',
@@ -64,7 +66,7 @@ export const videoStories: VideoStory[] = [
     id: 'ranch-morning',
     title: 'Ranch Morning Routine',
     description: 'See what mornings are like on Gian Lucca\'s Ranch!',
-    image: '/ranch-house.png',
+    image: assetUrl('ranch-house.png'),
     videoSrc: '/videos/ranch-morning.mp4?v=2',
     duration: '2:00',
     status: 'available',
@@ -76,7 +78,7 @@ export const videoStories: VideoStory[] = [
     id: 'starlight-lullaby',
     title: 'Starlight Lullaby',
     description: 'A soothing visual journey among the stars.',
-    image: '/hero-ranch-scene.png',
+    image: assetUrl('hero-ranch-scene.png'),
     videoSrc: '/videos/starlight-lullaby.mp4?v=2',
     duration: '1:55',
     status: 'available',

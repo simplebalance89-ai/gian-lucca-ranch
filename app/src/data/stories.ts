@@ -1,3 +1,5 @@
+import { assetUrl } from '../lib/supabaseAssets';
+
 export interface Story {
   id: string;
   title: string;
@@ -29,7 +31,7 @@ Benny sat very still. He heard the brook bubbling gently. He heard the horses br
 Benny's eyelids grew heavy. His paws felt warm and fuzzy. He curled up right there in the soft grass, and before the next firefly blinked, Benny the little bear was fast asleep, dreaming of honey, hugs, and another beautiful day on Gian Lucca's Ranch.
 
 The end. Sweet dreams, little one.`,
-    image: '/sleepy-bear-story.png',
+    image: assetUrl('sleepy-bear-story.png'),
     color: '#a67c52',
     icon: '🐻',
   },

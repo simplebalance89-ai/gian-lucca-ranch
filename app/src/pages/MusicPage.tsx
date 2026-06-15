@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Music, ArrowLeft, Play, Pause } from 'lucide-react';
 import { Link } from 'react-router';
 import FloatingNotes from '../components/FloatingNotes';
+import { assetUrl } from '../lib/supabaseAssets';
 
 const songs = [
   { id: 'baa-baa', title: 'Ba Ba Ab', desc: 'A classic favorite! 🐑', color: '#c4956a' },
@@ -64,7 +65,7 @@ export default function MusicPage() {
           className="rounded-3xl overflow-hidden border-4 border-white card-shadow mb-8 max-w-2xl mx-auto"
         >
           <img
-            src="/music-banner.png"
+            src={assetUrl('music-banner.png')}
             alt="Ranch music time"
             className="w-full h-auto object-cover"
           />

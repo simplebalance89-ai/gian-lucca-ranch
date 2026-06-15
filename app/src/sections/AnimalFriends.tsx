@@ -1,31 +1,32 @@
 import { motion } from 'framer-motion';
+import { assetUrl } from '../lib/supabaseAssets';
 
 const friends = [
   {
     name: 'Benny the Bear',
     description: 'Your best friend! Loves honey and warm hugs 🍯',
-    image: '/bear-friend.png',
+    image: assetUrl('bear-friend.png'),
     emoji: '🐻',
     color: '#c4956a',
   },
   {
     name: 'The Chicken Crew',
     description: 'Cluck cluck! They lay eggs and love to play 🥚',
-    image: '/chickens-friends.png',
+    image: assetUrl('chickens-friends.png'),
     emoji: '🐔',
     color: '#d4a76a',
   },
   {
     name: 'Tommy the Turkey',
     description: 'Gobble gobble! His feathers are so colorful 🌈',
-    image: '/turkey-friends.png',
+    image: assetUrl('turkey-friends.png'),
     emoji: '🦃',
     color: '#b8895c',
   },
   {
     name: 'The Ranch',
     description: 'Home sweet home — where all the magic happens 🏡',
-    image: '/ranch-house.png',
+    image: assetUrl('ranch-house.png'),
     emoji: '🏠',
     color: '#a3b18a',
   },
