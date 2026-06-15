@@ -57,6 +57,19 @@ export default function MusicPage() {
           <p className="text-[#8b7355]">Listen to fun ranch songs!</p>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.1 }}
+          className="rounded-3xl overflow-hidden border-4 border-white card-shadow mb-8 max-w-2xl mx-auto"
+        >
+          <img
+            src="/music-banner.png"
+            alt="Ranch music time"
+            className="w-full h-auto object-cover"
+          />
+        </motion.div>
+
         <div className="space-y-4 max-w-lg mx-auto">
           {songs.map((song, i) => (
             <motion.div
